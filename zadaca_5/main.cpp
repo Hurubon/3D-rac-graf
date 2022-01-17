@@ -94,14 +94,17 @@ int main ()
 
     while (!glfwWindowShouldClose(window))
     {
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
 
         RenderLine(points);
         RenderCircle(curve.P0, 5);
         RenderCircle(curve.P1, 5);
         RenderCircle(curve.P2, 5);
         RenderCircle(curve.P3, 5);
+
+        glfwPollEvents();
+        glfwSwapBuffers(window);
     }
 
     glfwTerminate();
