@@ -1,0 +1,3 @@
+[submodule "zadaca_5/glfw"]
+	path = zadaca_5/glfw
+	url = https://github.com/glfw/glfw
