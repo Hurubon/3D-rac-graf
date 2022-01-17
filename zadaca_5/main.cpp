@@ -37,11 +37,9 @@ class BezierCurve
     		, P3{ P3 }
     	{}
 
-        std::vector<glm::vec2> GetCurve(
-        	int const granularity)
-        const noexcept
+        std::vector<glm::vec2> GetCurve(int const granularity) const noexcept
         {
-            auto points = std::vector<glm::vec2>(granularity + 1);
+            auto points = std::vector<glm::vec2>(granularity);
 
             for (float t = 0; t <= 1; t += 1.f / granularity)
             {
